@@ -35,7 +35,7 @@ def scrape_reddit(subreddit):
     print("Logging into Reddit...")
     red = praw.Reddit(**config.reddit_login)
     print("Log in success! Retrieving post info...")
-    sub = red.subreddit(subreddit).top("week", limit=99)
+    sub = red.subreddit(subreddit).top("day", limit=99)
     output = []
 
     for i in sub:
