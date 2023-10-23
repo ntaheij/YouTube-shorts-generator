@@ -44,6 +44,7 @@ def scrape_reddit(subreddit):
             if url.split('.')[0] != 'https://v':
                 continue
             output.append({
+                'subreddit': i.display_name,
                 'url': url,
                 'title': i.title,
                 'author': i.author.name

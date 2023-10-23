@@ -49,7 +49,7 @@ def main():
     shutil.copy(glob.glob(os.path.join('temp_clips', '*.mp4'))[0], os.path.join('temp_clips', 'main_clip.mp4'))
     render.render("temp_clips", "main_clip.mp4", "output.mp4", config.video["dimensions"])
     # Upload the video to YouTube
-    config.youtube["title"] = vid["title"] + " #shorts #funny"
+    config.youtube["title"] = vid["title"] + " #shorts #funny #" + vid["subreddit"]
     config.youtube["description"] = "Video by: " + vid["author"]
 
     print("Uploading...")
